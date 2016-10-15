@@ -14,10 +14,8 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
-// Font stacks
-$helvetica: 'Lato', sans-serif;
-$helveticaNeue: 'Lato', sans-serif;
-$georgia: 'Lato', sans-serif;
+// Font stack
+$lato: 'Lato', sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
