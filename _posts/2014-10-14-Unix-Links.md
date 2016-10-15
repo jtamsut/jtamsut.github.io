@@ -40,6 +40,7 @@ $ ln oldfile newlink
 
 Suppose you were tasked with building an application that had two large parts, say a complex and dynamic UI and an API that interacted with this UI. If these two parts needed to be developed in synchrony meaning that they need to be tested against each other but also need to be in seperate GitHub repos, a symlink might be useful. You see, you can symlink the UI in the API or vice versa. That way the two projects do not need to be in the same directory and can still communicate with eachother.
 
+
 // TODO: Come up with better example.
 
 Sources:
