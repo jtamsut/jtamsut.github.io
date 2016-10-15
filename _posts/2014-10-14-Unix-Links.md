@@ -23,23 +23,23 @@ Now let's imaging that you have another directory name `foo` in the same directo
 Imagine that you would like to have another file named `file2.js` located in `foo` that always had the same exact contents as `file1.js`. This can be done with a *hard link* or a *soft link*. Inside the `foo` directory you can type this:
 
 ```sh
-$ ln ../file1.js file2.js
+$ ln ./../file1.js file2.js
 ```
 or this:
 
 ```sh
-$ ln -s ../file1.js file2.js
+$ ln -s ./../file1.js file2.js
 ```
 into the command line. In both cases if `file2.js` is executed it will result in the same output as `file1.js`. In this case if `file2.js` is executed with Node we get:
 
-```sh
-node file2.js //=> Hello world!
+```
+$ node file2.js //=> Hello world!
 ```
 
 So in the example above we used the `ln` command to create a link. In general, a link is created by typing in the command
 
-```sh
-ln <-s> <source> <link>
+```
+$ ln <-s> <source> <link>
 ```
 
 To create a hard link exclude the `-s` flag in your command. Hard links have two main limitations:
