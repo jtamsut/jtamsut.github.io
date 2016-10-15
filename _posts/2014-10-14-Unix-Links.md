@@ -4,47 +4,48 @@ title: "Unix Links"
 categories: unix links
 ---
 
-The Unix link is a useful mechanism that allows one to create a reference from one file or directory to another file or directory. This article will explore the two types of Unix links - hard links and symbolic links - and how they can be useful.
+This article will briefly explore the Unix link utility. A Unix link is a useful mechanism that allows one to create a reference from one file or directory to another file or directory. There are two types of Unix links - *hard links* and *symbolic links*.
 
+### What are Symbolic Links? What are Hard Links?
 
+A symbolic link is simply a reference to another file. They allow you to reference a file or directory with different names. Let's say you have a file named `file1.js` with the following contents:
 
-# A Primer on Unix Links
-
-## Soft v Hard
-
-Sometimes it may be useful to refer to a
-
-# What is a symbolic link
-
-A symbolic link is a link that points to another file and does not contain the data in the target file
-
-It points to another entry somewhere in the file system
-
-Symlinks can link to directories
-
-To create a symlink in Unix enter:
-
-```sh
-$ ln -s source_file myfile
+```javascript
+console.log('Hello world!')
 ```
 
-## What is a hard link?
+Now let's imaging that you have another directory name `foo` in the same directory as `file1.js` so the directory structure now looks like this:
 
-Hard links can only refer to files. They cannot refer to directories.
+```
+|- file1.js
+|- foo
+```
+Imagine that you would like to have another file named `file2.js` located in `foo` that always had the same exact contents as `file1.js`. This can be done with a *hard link* or a *soft link*. Inside the `foo` directory you can type this:
 
 ```sh
-$ ln oldfile newlink
+$ ln ../file1.js file2.js
+```
+or this:
+
+```sh
+$ ln -s ../file1.js file2.js
+```
+into the command line. In both cases if `file2.js` is executed it will result in the same output as `file1.js`. In this case if `file2.js` is executed with Node we get:
+
+```sh
+node file2.js //=> Hello world!
 ```
 
-## Use Case: Synchronizing Two GitHub Repositories
+So in the example above we used the `ln` command to create a link. In general, a link is created by typing in the command
 
-Suppose you were tasked with building an application that had two large parts, say a complex and dynamic UI and an API that interacted with this UI. If these two parts needed to be developed in synchrony meaning that they need to be tested against each other but also need to be in seperate GitHub repos, a symlink might be useful. You see, you can symlink the UI in the API or vice versa. That way the two projects do not need to be in the same directory and can still communicate with eachother.
+```sh
+ln <-s> <source> <link>
+```
 
+To create a hard link exclude the `-s` flag in your command. Hard links have two main limitations:
 
-// TODO: Come up with better example.
+* They can only reference files, **NOT** directories.
+* They cannot reference files outside its own filesystem. This means that a hard link can only reference files on its same disk partition.
 
-Sources:
+Both hard and soft links create files that reference a "source file" that is practically indistinguishable from the "source" file.
 
-[1] http://unix.stackexchange.com/questions/20670/why-do-hard-links-exist
-[2] `$ man ln`
-[3] https://kb.iu.edu/d/abbe
