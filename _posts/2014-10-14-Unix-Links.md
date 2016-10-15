@@ -24,7 +24,7 @@ Symlinks can link to directories
 
 To create a symlink in Unix enter:
 
-```
+```sh
 $ ln -s source_file myfile
 ```
 
@@ -32,7 +32,7 @@ $ ln -s source_file myfile
 
 Hard links can only refer to files. They cannot refer to directories.
 
-```
+```sh
 $ ln oldfile newlink
 ```
 
