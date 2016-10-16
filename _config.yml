@@ -21,7 +21,7 @@ footer-links:
   github: jtamsut
   linkedin: jtamsut
   rss: rss
-  stackoverflow: test
+  stackoverflow: jtamsut
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -34,6 +34,10 @@ google_analytics:
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: http://www.jtamsut.com
+
+# Enable pagination of 10 posts per page
+
+paginate: 2
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -62,7 +66,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
+  - jekyll-paginate # Allow pagination
 # Exclude these files from your production _site
 exclude:
   - Gemfile
