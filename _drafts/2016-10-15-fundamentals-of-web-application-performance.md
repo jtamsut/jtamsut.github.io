@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Fundamentals of Web Application Performance"
+categories: speed performance
+---
+
 latency - the time from source sending packet to the destination receiving it
 bandwidth
 
