@@ -39,3 +39,45 @@ TODO: Finish this article with plenty of examples, precision and understanding
 
 
 In Ruby an object is created
+
+# The Ruby Programming Language
+Break this up into smaller topics
+In Ruby everything is an Object. Ruby has a rich API will many built-in methods.
+
+### Methods
+
+Generally methods can be called on objects using the dot (`.`) notation. For example,
+
+```ruby
+"hello".class.superclass #=> Object
+"hello".upcase #=> "HELLO"
+```
+
+### puts vs. p vs. print
+
+The combined comparison operator works like this:
+
+```ruby
+1 <=> 10 #=> -1
+10 <=> 1 #=> 1
+1 <=> 1 #=> 0
+```
+
+It is convention to have `?` at the end of methods that return a Boolean. For example,
+
+```ruby
+4.even? #=> true
+```
+
+### Objects in Ruby
+
+A class is defined like so in Ruby:
+
+```ruby
+class Subclass < Superclass
+end
+```
+
+A subclass inherits all of the properties from a superclass.
+
+Sources: http://rubylearning.com/satishtalim/first_ruby_program.html
