@@ -4,9 +4,24 @@ title: "Networking for Web Developers, Part I"
 categories: networking http tcp ip
 ---
 
-This is the first installment in a three part series discussing Networking
+IP or Internet Protocol is what provides host-to-host routing and addressing
+
+TCP, Transmission Control Protocol, is what provides the abstraction of a
+reilable network running over an unreliable
+
+Paper by Vint Cerf *A Protocol for Packet Network Intercommunication*
+
+History of the Internet
+
+ARPANET came first
+
+Let's make this a really comprehensive 5 part series.
+
+This is the first installment in a five part series discussing Networking
 
 This is a great resource: https://hpbn.co/
+
+http://www.howtogeek.com/190148/8-common-network-utilities-explained/
 
 https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work
 
