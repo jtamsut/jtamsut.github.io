@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript Modules"
-categories: unix links
+categories: javascript modules
 ---
 
 This article discusses the module design pattern. The module design pattern is a common design pattern
