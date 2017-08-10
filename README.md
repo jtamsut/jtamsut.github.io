@@ -2,7 +2,7 @@
 
 This is my personal blog built using Jekyll. This site contains articles on a variety of Computer Science, Math and Software Development topics.
 
-To visit my blog [here](www.jtamsut.com).
+To visit my blog [here]("jtamsut.com").
 
 ## The Use of Jekyll
 
