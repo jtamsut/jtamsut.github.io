@@ -24,7 +24,7 @@ A **database** is any "technology" that stores data in an organized fashion for 
 
 ### Vast Landscape of Databases 
 
-How a database organizes its data determines what type of database it is. Relational databases store data ini tables and rows while key-value stores store data in key-value pairs. 
+How a database organizes its data determines what type of database it is. Relational databases store data in tables and rows while key-value stores store data in key-value pairs. 
 
 The term *database* is a generic term referring to anything that stores data. A **Database Management Software** (DBMS) is a specific piece of software used to manipulate a database. There are many relational DBMS's. Here are three of them:
 
@@ -419,3 +419,15 @@ Cap Theorem
 Relational Algebra
 
 http://robertgreiner.com/2014/08/cap-theorem-revisited/
+
+Commands 
+`ORDER BY` 
+`UNION` 
+`AS` 
+
+
+## Joins and Subqueries 
+
+Joining allows you to query multiple tables at once. 
+
+Cartesian product
