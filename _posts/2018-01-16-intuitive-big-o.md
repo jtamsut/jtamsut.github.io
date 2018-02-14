@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "An Intuitive Introduction to Big-O"
-categories: javascript modules
+categories: algorithms big-o
 ---
-
-## What is an Algorithm? What is a Data Structure?
 
 An **algorithm** is a list of instructions to complete some task. An example of an algorithm is a recipe. A **data structure** is a way of organizing data. A family tree is a type of data structure. It organizes the relationships amongst familial relatives in an intuitive and hierarchical way.
 
