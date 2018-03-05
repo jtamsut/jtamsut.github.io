@@ -28,16 +28,7 @@ Let's write an algorithm to recursively compute a factorial of some integer.
 
 Ok, now that we have our recursive step and base case lets write our algorithm: 
 
-```js
-function factorial(x) {
-    if (x === 1) {
-        return x
-    } 
-    return x * factorial(x-1)  
-}
-
-factorial(3)
-```
+<img style="width: 50%;" src="{{ "/images/snippet1a.png" }}" />
 
 If you paste the above algorithm into the Chrome DevTools `Snippets` tab you can visual the **call stack**. The **call stack** is a stack that records function calls. When a function is returned it is popped off the stack. When a function *calls* another function the *called* function is added to the call stack. Each one of our `recursive` calls to factorial places `factorial` onto the stack.
 
@@ -45,17 +36,8 @@ If you paste the above algorithm into the Chrome DevTools `Snippets` tab you can
 
 We stated earlier that we could express all iterative functions in a recursive way. Let's write `forEach` recursively. Here is the code below:
 
-```js
-function recursiveForEach(inp, out, index, cb) {
-        if (index === inp.length) {
-                return out
-        }
-        out.push(cb(inp[index]))
-        return recursiveForEach(inp, out, index+1, cb)
-}
+<img style="width: 75%;" src="{{ "/images/snippet2b.png" }}" />
 
-recursiveForEach([1,2,3], [], 0, (x) => x + 1) //=> [2,3,4]
-```
 
 We pass `recursiveForEach` an input array, an empty array, a starting index and a callback. It returns to us the result of applying `cb` to each element in `inp`.
 
@@ -103,37 +85,7 @@ node 4 = [node 1, node 4]
 
 Below is an undirected, unweighted graph written in JavaScript.
 
-```js
-class Graph {
-	
-	constructor() {
-		this.nodes = {}
-	}
-	
-	addNode(value) {
-		this.nodes[value] = [] 	
-	}
-
-	addEdge(fromNode, toNode) {
-		this.nodes[fromNode].push(toNode)
-		this.nodes[toNode].push(fromNode)
-	}
-
-}
-
-const g1 = new Graph 
-
-g1.addNode('A')
-g1.addNode('B')
-g1.addNode('C')
-g1.addNode('D')
-g1.addNode('E')
-
-g1.addEdge('A', 'B')
-g1.addEdge('B', 'D')
-g1.addEdge('B', 'C')
-g1.addEdge('D', 'E')
-```
+<img style="width: 60%;" src="{{ "/images/snippet3c.png" }}" />
 
 ### Breadth-First Search and Greedy Algorithms
 
