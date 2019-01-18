@@ -1,3 +1,0 @@
-body *:not(a)::selection { 
-    background: yellow;
-}
